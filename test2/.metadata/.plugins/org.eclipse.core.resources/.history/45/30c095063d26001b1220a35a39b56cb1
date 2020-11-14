@@ -1,0 +1,32 @@
+
+package test2;
+
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+
+import org.apache.log4j.Logger;
+
+import CryptoTest.AES256Util;
+import CryptoTest.Sha256Uil;
+
+public class example {
+
+   public static void main(String[] args) throws Exception {
+      Logger log = Logger.getLogger(example.class);
+      log.debug("debug test");
+      log.info("info test");
+      log.warn("warn test");
+      log.error("error test");
+      
+      String plainText = "12345";
+      
+      Sha256Uil sha256Test = new Sha256Uil();
+      AES256Util aes256Test = new AES256Util();
+    
+      System.out.println("원문: " + plainText);
+      System.out.println("SHA-256 암호화: " + sha256Test.sha256(plainText));
+      System.out.println("AES-256 암호화: " + aes256Test.encrypt(plainText));
+      System.out.println("AES-256 복호화: " + aes256Test.decrypt(aes256Test.encrypt(plainText)));
+   }
+}

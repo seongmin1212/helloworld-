@@ -1,0 +1,28 @@
+
+package test2;
+import java.util.Scanner;
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+
+import org.apache.log4j.Logger;
+
+import CryptoTest.AES256Util;
+import CryptoTest.Sha256Uil;
+
+public class example {
+
+   public static void main(String[] args) throws Exception {
+      Logger log = Logger.getLogger(example.class);
+      
+      Scanner sc = new Scanner(System.in);
+      String id = sc.nextLine();
+      String password = sc.nextLine();
+      
+      Sha256Uil sha256Test = new Sha256Uil();
+      AES256Util aes256Test = new AES256Util();
+    
+      System.out.println(id);
+      System.out.println(password);
+   }
+}

@@ -1,0 +1,15 @@
+
+package test2;
+
+import org.apache.log4j.Logger;
+
+public class example {
+
+   public static void main(String[] args) {
+      Logger log = Logger.getLogger(example.class);
+      log.debug("debug test");
+      log.info("info test");
+      log.warn("warn test");
+      log.error("error test");
+   }
+}
